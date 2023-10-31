@@ -26,9 +26,9 @@ const Register = () => {
 
   useEffect(() => {
     if (localStorage.getItem("chat-app-user")) {
-      navigate("/");
+      navigate("/login");
     }
-  });
+  },[]);
 
   const handleValidation = () => {
     
