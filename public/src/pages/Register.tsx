@@ -46,10 +46,10 @@ const Register = () => {
     
     return true;
   };
-  const handleChange = (e) => {
+  const handleChange = (e:any) => {
     setValues({ ...values, [e.target.name]: e.target.value });
   };
-  const handleSubmit = async (event) => {
+  const handleSubmit = async (event:any) => {
    event.preventDefault();
     if (handleValidation()) {
             const { password, email, username } = values;

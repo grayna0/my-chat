@@ -4,12 +4,12 @@ import { Link, useNavigate } from "react-router-dom";
 import { loginRoute } from "../utils/APIRoutes";
 import axios from "axios";
 import { useEffect, useState } from "react";
-import { log } from "console";
+
 
 const Login = () => {
   const navigate = useNavigate();
   const [values, setValues] = useState({ username: "", password: "" });
-  const toastOptions = {
+  const toastOptions:ToastOptions = {
     position: "bottom-right",
     autoClose: 8000,
     pauseOnHover: true,
@@ -22,7 +22,7 @@ const Login = () => {
     }
   }, []);
 
-  const handleChange = (e) => {
+  const handleChange = (e:any) => {
     setValues({ ...values, [e.target.name]: e.target.value });
   };
 
@@ -38,7 +38,7 @@ const Login = () => {
     return true;
   };
 
-  const handleSubmit = async (event) => {
+  const handleSubmit = async (event:any) => {
     event.preventDefault();
     if (validateForm()) {
       console.log(values);

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { useEffect } from "react";
 import styled from "styled-components";
 const Contacts = ({
@@ -20,7 +20,7 @@ const Contacts = ({
       setCurrentUserImage(currentUser.avatarImage);
     }
   }, [currentUser]);
-  const changeCurrentChat = (index, contact) => {
+  const changeCurrentChat = (index:any, contact:any) => {
     setCurrentSelected(index)
     changeChat(contact)
   
@@ -34,7 +34,7 @@ const Contacts = ({
             <h3>Hello G-ray</h3>
           </div>
           <div className="contacts">
-            {testcontacts.map((contact, index) => {
+            {testcontacts.map((contact:any, index:any) => {
               return (
                 <div
                   key={contact._id}

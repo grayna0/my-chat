@@ -1,8 +1,8 @@
-import React, { useRef, useState } from "react";
+import  { useRef, useState } from "react";
 import styled from "styled-components";
 
 import ChatInput from "./ChatInput";
-import { v4 as uuidv4 } from "uuid";
+import { v4 as uuidv4 } from 'uuid';
 
 import axios from "axios";
 import { getAllMessageRoute, sendMessageRoute } from "../utils/APIRoutes";
@@ -36,7 +36,7 @@ const ChatContainer = ({
       fetchMessage();
     }
   }, [currentChat]);
-  const handleSendMsg = async (msg) => {
+  const handleSendMsg = async (msg:any) => {
     await axios.post(sendMessageRoute, {
       from: currentUser._id,
       to: currentChat._id,
@@ -53,13 +53,13 @@ const ChatContainer = ({
   };
   useEffect(() => {
     if (socket.current) {
-      socket.current.on("msg-recieve", (msg) => {
+      socket.current.on("msg-recieve", (msg:any) => {
         setArrivalMessage({ fromseft: false, message: msg });
       });
     }
   }, []);
   useEffect(() => {
-    arrivalMessage && setMessages((prev) => [...prev, arrivalMessage]);
+    arrivalMessage && setMessages((prev:any) => [...prev, arrivalMessage]);
   }, [arrivalMessage]);
   useEffect(() => {
     scrollRef.current?.scrollIntoView({ behavior: "smooth" });

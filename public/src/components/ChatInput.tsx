@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { BsEmojiSmileFill } from "react-icons/bs";
 import { IoMdSend } from "react-icons/io";
 import styled from "styled-components";
@@ -10,7 +10,7 @@ const ChatInput = ({handleSendMsg}:{handleSendMsg:(msg:string) => void}) => {
   const handleEmojiHideShow = () => {
     setShowemoji(!showEmoji);
   };
-  const handleEmojiClick = (emojiData, event) => {
+  const handleEmojiClick = (emojiData:any) => {
     const emojiResult = emojiData.isCustom
       ? emojiData.unified
       : emojiData.emoji;
@@ -18,7 +18,7 @@ const ChatInput = ({handleSendMsg}:{handleSendMsg:(msg:string) => void}) => {
     message += emojiResult;
     setMsg(message);
   };
-  const senChat = (event ) => {
+  const senChat = (event:any ) => {
 event.preventDefault();
 if(msg.length >0) {
   handleSendMsg(msg)

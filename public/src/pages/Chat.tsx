@@ -55,7 +55,7 @@ useEffect(() =>{
     fecthUsers()
   },[currentUser])
 
-  const handleChatChange =  (chat) => {
+  const handleChatChange =  (chat:any) => {
     setCurrentChat(chat);
 
   }
