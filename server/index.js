@@ -38,9 +38,7 @@ const io =socket(server, {
 
     origin: 'http://chat-way.surge.sh',
     credentials:true,
-    methods: ['GET', 'POST'],
-    allowedHeaders: ['Content-Type', 'Authorization']
-   
+  
   }
 });
  global.onlineUsers = new Map()
