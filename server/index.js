@@ -36,7 +36,7 @@ const server = app.listen(process.env.PORT, () =>
 const io =socket(server, {
   cors: {
 
-    origin: 'http://chat-way.surge.sh',
+    origin: 'http://chat-salt.surge.sh',
     credentials:true,
   
   }
