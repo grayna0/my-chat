@@ -39,7 +39,7 @@ const io =socket(server, {
     origin: 'http://chat-way.surge.sh',
     credentials:true,
     methods: ['GET', 'POST'],
-    allowedHeaders: ['Content-Type', 'Authorization',"Access-Control-Allow-Origin"]
+    allowedHeaders: ['Content-Type', 'Authorization']
    
   }
 });
