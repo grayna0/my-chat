@@ -35,8 +35,12 @@ const server = app.listen(process.env.PORT, () =>
 
 const io =socket(server, {
   cors: {
-    origin: 'http://localhost:5173',
-    credentials:true
+
+    origin: 'http://chat-way.surge.sh',
+    credentials:true,
+    methods: ['GET', 'POST'],
+    allowedHeaders: ['Content-Type', 'Authorization']
+   
   }
 });
  global.onlineUsers = new Map()
