@@ -5,6 +5,7 @@ import "react-toastify/dist/ReactToastify.css";
 
 import { registerRoute } from "./../utils/APIRoutes";
 import axios from "axios";
+import { LoginAcountDetail } from "./type";
 
 const Register = () => {
   const navigate = useNavigate();
