@@ -1,7 +1,6 @@
 import { Link, useNavigate } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { ToastContainer, toast, ToastOptions } from "react-toastify";
-import { FormContainer, LoginAcountDetail } from "./type";
 import "react-toastify/dist/ReactToastify.css";
 
 import { registerRoute } from "./../utils/APIRoutes";
@@ -69,7 +68,7 @@ const Register = () => {
   };
   return (
     <>
-      <FormContainer>
+      <div className="form-container">
         <form onSubmit={(event) => handleSubmit(event)}>
           <div className="bran">
             <img src="/logo.jpg" alt="{logo}" />
@@ -105,7 +104,7 @@ const Register = () => {
           </span>
         </form>
         <ToastContainer />
-      </FormContainer>
+      </div>
     </>
   );
 };
