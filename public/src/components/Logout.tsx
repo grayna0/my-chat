@@ -11,9 +11,9 @@ const LogOut = () => {
         navigate("/login");
     }
   return (
-    <Button onClick={handleClick }>
+    <button className="btn" onClick={handleClick }>
        <BiPowerOff /> 
-    </Button>
+    </button>
   )
 }
 const Button = styled.button`

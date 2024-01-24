@@ -36,15 +36,17 @@ const server = app.listen(process.env.PORT, () =>
 const io =socket(server, {
   cors: {
 
-    origin: 'http://chat-salt.surge.sh',
+    origin: 'http://localhost:5173',
     credentials:true,
   
   }
 });
+
  global.onlineUsers = new Map()
  io.on('connection', (socket) =>{
-  global.chatSocket = socket
-  socket.on("add-user", (userId) =>{
+   global.chatSocket = socket
+   console.log(socket);``
+   socket.on("add-user", (userId) =>{
     onlineUsers.set(userId, socket.id)
   })
   socket.on("send-msg", (data) =>{

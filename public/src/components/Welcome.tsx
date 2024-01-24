@@ -5,13 +5,13 @@ const Welcome = ({ currentUser }: { currentUser: any }) => {
 
   
   return (
-    <Container  >
+    <div className=" loader"  >
       <img src={loader} alt="loader" />
       <h1>
         Welcome, <span>{currentUser?.username}</span>
       </h1>
       <h3>Please select chat</h3>
-    </Container >
+    </div >
   );
 };
 

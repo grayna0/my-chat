@@ -71,11 +71,11 @@ const SetAvatar = () => {
 
   return (
     <>{
-      loading ? <Container>
+      loading ? <div className="container">
         <img src={loader} alt="loader"  className="loader"/>
-      </Container> :
+      </div> :
   
-      <Container>
+      <div className="container">
         <div className="title-container">
           <h1>Pick an avatar as your profile picture</h1>
         </div>
@@ -90,7 +90,7 @@ const SetAvatar = () => {
           })}
         </div>
           <button className="submit-btn" onClick={setProfilePicture}>Set as  Profile Picture</button>
-      </Container>
+      </div>
     }
       <ToastContainer />
     </>

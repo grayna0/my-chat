@@ -60,7 +60,7 @@ useEffect(() =>{
 
   }
   return (
-    <Container>
+    <div className="wapped-container">
       <div className="container">
         <Contacts testcontacts={contacts} currentUser={currentUser} changeChat={handleChatChange}/>
         {currentChat === undefined ?
@@ -71,7 +71,7 @@ useEffect(() =>{
 
         }
       </div>
-    </Container>
+    </div>
   )
 }
 const Container=  styled.div`

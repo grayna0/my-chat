@@ -28,7 +28,7 @@ const Contacts = ({
   return (
     <>
         {currentUserImage && currentUserImage && (
-        <Container>
+        <div className="wapped-brand">
           <div className="brand">
             <img src="./logo.jpg" alt="logo" />
             <h3>Hello G-ray</h3>
@@ -67,7 +67,7 @@ const Contacts = ({
               <h2>{currentUserName}</h2>
             </div>
           </div>
-        </Container>
+        </div>
       )}
     </>
   );
