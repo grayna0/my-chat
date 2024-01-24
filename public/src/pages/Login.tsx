@@ -1,5 +1,4 @@
 import { ToastContainer, ToastOptions, toast } from "react-toastify";
-import { FormContainer } from "./type";
 import { Link, useNavigate } from "react-router-dom";
 import { loginRoute } from "../utils/APIRoutes";
 import axios from "axios";
@@ -63,7 +62,7 @@ const Login = () => {
   };
   return (
     <>
-      <FormContainer>
+      <div className="form-container">
         <form onSubmit={(event) => handleSubmit(event)}>
           <div className="bran">
             <img src="/logo.jpg" alt="{logo}" />
@@ -90,7 +89,7 @@ const Login = () => {
           </span>
         </form>
         <ToastContainer />
-      </FormContainer>
+      </div>
     </>
   );
 };

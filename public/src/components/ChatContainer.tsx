@@ -1,9 +1,6 @@
 import  { useRef, useState } from "react";
-import styled from "styled-components";
-
 import ChatInput from "./ChatInput";
 import { v4 as uuidv4 } from 'uuid';
-
 import axios from "axios";
 import { getAllMessageRoute, sendMessageRoute } from "../utils/APIRoutes";
 import LogOut from "./Logout";

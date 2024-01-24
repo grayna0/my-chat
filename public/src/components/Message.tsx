@@ -1,11 +1,10 @@
 
-import styled from 'styled-components'
+
 
 const Message = () => {
   return (
-    <Container>Message</Container>
+    <div>Message</div>
   )
 }
-const Container= styled.div`
-`
+
 export default Message

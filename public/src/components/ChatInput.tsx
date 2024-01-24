@@ -1,7 +1,6 @@
 import { useState } from "react";
 import { BsEmojiSmileFill } from "react-icons/bs";
 import { IoMdSend } from "react-icons/io";
-import styled from "styled-components";
 import Picker from "emoji-picker-react";
 
 const ChatInput = ({handleSendMsg}:{handleSendMsg:(msg:string) => void}) => {
