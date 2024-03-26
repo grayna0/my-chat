@@ -1,10 +1,11 @@
-import  { useRef, useState } from "react";
+import  {  useRef, useState } from "react";
 import ChatInput from "./ChatInput";
 import { v4 as uuidv4 } from 'uuid';
 import axios from "axios";
 import { getAllMessageRoute, sendMessageRoute } from "../utils/APIRoutes";
 import LogOut from "./Logout";
 import { useEffect } from "react";
+
 
 const ChatContainer = ({
   currentChat,
@@ -17,10 +18,7 @@ const ChatContainer = ({
 }) => {
   const scrollRef = useRef<any>();
   const [messages, setMessages] = useState<any>([]);
-  const [arrivalMessage, setArrivalMessage] = useState<any>(null);
-  
-
-  
+  const [arrivalMessage, setArrivalMessage] = useState<any>(null); 
   useEffect(() => {
     const fetchMessage = async () => {
       const res = await axios.post(getAllMessageRoute, {
@@ -29,9 +27,10 @@ const ChatContainer = ({
       });
       setMessages(res.data);
     };
-    if (currentChat) {
+   
       fetchMessage();
-    }
+    
+    
   }, [currentChat]);
   const handleSendMsg = async (msg:any) => {
     await axios.post(sendMessageRoute, {
