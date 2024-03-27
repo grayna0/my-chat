@@ -1,4 +1,4 @@
-export const host = "https://sever-kayzchat.vercel.app"
+export const host = "http://localhost:10000"
 
 
 export const registerRoute =`${host}/api/auth/register` 
